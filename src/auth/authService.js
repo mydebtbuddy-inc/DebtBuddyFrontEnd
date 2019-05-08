@@ -10,7 +10,7 @@ const loginEvent = 'loginEvent';
 
 const webAuth = new auth0.WebAuth({
     domain: authConfig.domain,
-    redirectUri: window.location.origin + process.env.BASE_URL + "callback",
+    redirectUri: window.location.origin + process.env.VUE_APP_BASE_URL + "callback",
     clientID: authConfig.clientId,
     responseType: 'id_token',
     scope: 'openid profile email'
@@ -94,7 +94,7 @@ class AuthService extends EventEmitter {
         this.profile = null;
 
         webAuth.logout({
-            returnTo: window.location.origin + process.env.BASE_URL
+            returnTo: window.location.origin + process.env.VUE_APP_BASE_URL
         });
 
         this.emit(loginEvent, { loggedIn: false });

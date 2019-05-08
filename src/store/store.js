@@ -39,5 +39,5 @@ export default new Vuex.Store({
         auth: moduleAuth,
         eCommerce: moduleECommerce,
     },
-    strict: process.env.NODE_ENV !== 'production'
+    strict: process.env.VUE_APP_NODE_ENV !== 'production'
 })

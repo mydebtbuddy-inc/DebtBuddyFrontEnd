@@ -97,7 +97,12 @@ export default {
     },
     computed: {
         validateForm() {
-            return !this.errors.any() && this.username != '' && this.email != '' && this.password != '' && this.confirm_password != '' && this.isTermsConditionAccepted === true;
+            return !this.errors.any() && 
+                this.username != '' && 
+                this.email != '' && 
+                this.password != '' && 
+                this.confirm_password != '' && 
+                this.isTermsConditionAccepted === true;
         }
     },
     methods: {
